@@ -41,12 +41,12 @@ export default function App() {
   return (
     <div className="bg-gradient-to-b from-blue-700 to-blue-300 h-screen">
       <h1 className="pt-2 text-3xl font-bold text-white text-center">Weatherify</h1>
-      <div className="flex pt-5 gap-2 justify-center items-center">
+      <div className="flex flex-col pt-5 gap-2 justify-center items-center">
+        {time && <p className="bg-black  text-xl text-center font-medium text-white w-32  px-1 py-1 rounded-xl" style={{ display: time ? "block" : "none" }}>{time}</p>}
         <div className="bg-white w-fit px-2 py-1 rounded-xl">
           <input className="bg-transparent w-60 outline-none" placeholder="Search for a City" onKeyDown={handleKeyPress} onChange={handleInput} value={city} type="text" />
           <button className="bg-blue-600 p-1  rounded-xl text-white font-medium" onClick={handleSubmit}>Submit</button>
         </div>
-        {time && <p className="text-xl text-center font-medium text-black w-32 bg-white px-1 py-1 rounded-xl" style={{ display: time ? "block" : "none" }}>{time}</p>}
       </div>
 
       <AnimatePresence>
@@ -56,7 +56,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="rounded p-1 w-fit bg-red-100 text-xs text-red-500"
+            className="ml-8 rounded p-1 w-fit bg-red-100 text-xs text-red-500"
           >
             {error}
           </motion.p>
