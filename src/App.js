@@ -41,9 +41,9 @@ export default function App() {
   return (
     <div className="flex flex-col relative bg-gradient-to-b from-blue-700 to-blue-300 h-screen">
       <h1 className="pt-2 md:pt-10 md:text-5xl text-3xl font-bold text-white text-center">Weatherify</h1>
-      <div className=" flex flex-col md:flex-row pt-5 gap-2 justify-center items-center">
-        {time && <p className="bg-black md:absolute md:left-10 md:text-2xl text-xl text-center font-medium text-white md:w-48  px-1 py-1 rounded-xl" style={{ display: time ? "block" : "none", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>{time} <i class="fa-regular fa-clock fa-spin"></i></p>}
-        <div className="bg-white w-fit px-2 py-1 rounded-xl">
+      <div className=" flex flex-col md:flex-row pt-5 gap-4 justify-center items-center">
+        {time && <p className="bg-black md:absolute md:left-10 md:text-2xl text-xl text-center font-medium text-white md:w-48  px-3 py-2 rounded-xl" style={{ display: time ? "block" : "none", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>{time} <i class="fa-regular fa-clock fa-spin"></i></p>}
+        <div className="bg-white w-fit px-3 py-2 rounded-xl">
           <input className="bg-transparent w-60 md:w-72 outline-none" placeholder="Search for a City" onKeyDown={handleKeyPress} onChange={handleInput} value={city} type="text" />
           <button className="bg-blue-600 md:text-lg p-1 hover:bg-black rounded-xl text-white font-medium" onClick={handleSubmit}>Submit</button>
         </div>
@@ -64,7 +64,7 @@ export default function App() {
       </AnimatePresence>
 
       <div className="p-4 flex flex-col items-center gap-2">
-        {weather && <p className="text-xl md:mt-10 md:mb-4 md:text-2xl font-medium text-white" style={{ display: weather ? "block" : "none" }}>Today - {weather.name}</p>}
+        {weather && <p className="text-2xl mt-5 mb-5 md:mt-10 md:mb-4 md:text-2xl font-medium text-white" style={{ display: weather ? "block" : "none" }}>Today - {weather.name}</p>}
         <div className="flex md:flex-row flex-col gap-2 w-full h-full px-4 flex-grow">
           {weather &&
             <motion.div
