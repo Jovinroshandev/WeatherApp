@@ -64,7 +64,7 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
-                        className="ml-8 md:absolute md:left-[430px] md:top-[153px]  flex rounded p-1 w-fit bg-red-100 text-xs  text-red-500"
+                        className="ml-8 md:absolute md:left-[430px] md:top-[190px]  flex rounded p-1 w-fit bg-red-100 text-xs  text-red-500"
                     >
                         {error}
                     </motion.p>
