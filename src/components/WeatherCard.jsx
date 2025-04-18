@@ -11,8 +11,8 @@ const WeatherCard = ({ weather }) => {
 
   return (
     <div className="text-center">
-      <img src={imageSrc} alt={weather} className="w-20 h-20 mx-auto" />
-      <h2 className="text-lg font-semibold  mb-2">{weather.charAt(0).toUpperCase()+weather.slice(1).toLowerCase()}</h2>
+      <img src={imageSrc} alt={weather} className="w-20 h-20 md:w-32 md:h-32 mx-auto" />
+      <h2 className="text-lg md:text-xl md:font-medium font-semibold  mb-2">{weather.charAt(0).toUpperCase()+weather.slice(1).toLowerCase()}</h2>
     </div>
   );
 };
